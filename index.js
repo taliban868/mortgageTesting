@@ -80,7 +80,27 @@ function clearAll() {
 }
 
 
+
+function calculate() {
+  
+}
+
 function showResults() {
+  const mortgageAmount = document.getElementById('amount').value;
+  const mortgageTerm = document.getElementById('term').value;
+  const interestRate = document.getElementById('rate').value;
+
+
+    let monthlyInterestRate = (interestRate / 100) / 12;
+    // Calculate total number of monthly payments
+    let numberOfPayments = mortgageTerm * 12;
+    // Calculate the monthly payment using the formula
+    let monthlyPayment = mortgageAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+
+    let totalRepayAmount = (monthlyPayment.toFixed(2)) * numberOfPayments;
+    console.log(totalRepayAmount);
+    console.log(monthlyPayment);
+
   document.querySelector('.js-results')
     .innerHTML =`
     <div class="right-section-completed">
@@ -95,7 +115,7 @@ function showResults() {
         Your monthly repayments
       </p>
       <h1 class="repayment-amount">
-        $1,797.74
+        $${monthlyPayment.toFixed(2)}
       </h1>
     </div>
     <div class="bottom-card">
@@ -103,10 +123,12 @@ function showResults() {
         Total you'll repay over the term
       </p>
       <h2 class="total-repay-amount">
-        $539,322.94
+        $${totalRepayAmount.toFixed(2)}
       </h2>
     </div>
   </div>
 </div>
     `;
+    
 }
+
