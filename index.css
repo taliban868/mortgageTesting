@@ -1,0 +1,305 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: hsl(202, 86%, 94%);
+}
+
+body p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.main-container {
+  background-color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  width: 55%;
+  border-radius: 18px;
+  margin-top: 120px;
+}
+
+.left-section {
+  padding: 15px;
+  width: 50%;
+}
+
+.right-section-empty {
+  width: 50%;
+}
+
+
+.right-section-completed {
+  color: white;
+  padding: 15px;
+  height: 93%;
+  width: 100%;
+  background-color: hsla(201, 52%, 23%, 0.997);
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.empty {
+  color: white;
+  padding: 15px;
+  height: 93%;
+  width: 100%;
+  background-color: hsl(202, 55%, 16%);
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+
+.inner-top-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+.mortgage-amount, .mortgage-term, .interest-rate {
+  display: flex; 
+  border: 2px solid grey;
+  border-radius: 8px;
+}
+
+.mortgage-amount input, .mortgage-term input, .interest-rate input {
+  border: none;
+}
+
+.mortgage-amount input, .mortgage-term input, .interest-rate input {
+  cursor: pointer;
+  width: 100%;
+  border-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.mortgage-term label  {
+  background-color: hsl(202, 86%, 94%);
+  padding-top: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  width: 40%;
+  margin-bottom: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.text-amount {
+  background-color: hsl(202, 86%, 94%);
+  padding-top: 5px;
+  padding-left: 25px;
+  font-size: 18px;
+  width: 10%;
+  margin-bottom: 0px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.interest-rate label {
+  background-color: hsl(202, 86%, 94%);
+  padding-top: 5px;
+  padding-left: 12px;
+  font-size: 18px;
+  width: 20%;
+  margin-bottom: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-left {
+  width: 50%;
+}
+
+.form-right {
+  width:50%;
+}
+
+.form-left input {
+  width: 100%;
+}
+
+.form-right input {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  gap: 5%;
+  width: 98%;
+}
+
+input {
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid grey;
+}
+
+input[type="text"]:focus + .inputss {
+  background-color: yellow;
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+
+.type {
+  padding-top: 15px;
+}
+
+.type legend {
+  padding-bottom: 10px;
+}
+
+.labels {
+  width: 92%;
+  position: relative;
+  border: 2px solid grey;
+  padding: 10px ;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.labels:hover {
+  border: 2px solid hsl(61, 70%, 52%);
+}
+
+.labels::before {
+  content: '';
+  height: 15px;
+  width: 15px;
+  border: 2px solid grey;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+input[type="radio"]:checked + .labels {
+  background-color: hsla(61, 91%, 50%, 0.21);
+  border: 2px solid hsl(61, 70%, 52%);
+}
+
+input[type="radio"]:checked + .labels::before {
+  background-color: hsl(61, 70%, 52%);
+  height: 15px;
+  width: 15px;
+  border: 2px solid grey;
+}
+.radios {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  display: flex;
+  border: 2px solid grey;
+  align-items: center;
+}
+
+
+.button {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  background-color: hsl(61, 70%, 52%);
+  border: none;
+  width: 65%;
+  height: 45px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.empty {
+  padding-top: 20px;
+  text-align: center;
+}
+
+
+
+.empty-text {
+  padding-top: 0px;
+  font-size: 20px;
+}
+
+
+
+.results-card {
+  background-color: hsl(202, 55%, 16%);
+  border-radius: 10px;
+  border-top: 5px solid hsl(61, 70%, 52%);
+  padding: 10px 20px;
+}
+
+.top-card {
+  border-bottom: 3px solid grey;
+}
+
+.repayment-amount {
+  margin: 0px;
+  padding: 0px;
+  font-size: 55px;
+  color: hsl(61, 70%, 52%);
+}
+
+@media (max-width:721px) {
+  body {
+    background-color: white;
+  }
+  .main-container {
+    display: block;
+    width: 100%;
+    margin: 0px;
+    padding-top: 50px;
+    border-radius: 0px;
+    
+    margin: 0 auto;
+  }
+  .left-section {
+    padding: 0px;
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  .right-section-empty {
+    padding-top: 30px;
+    width: 100%;
+  }
+  .empty, .right-section-completed {
+    color: white;
+    height: 92%;
+    width: 92%;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .button {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    width: 85%;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .repayment-amount {
+    font-size: 40px;
+  }
+  .total-repay-amount {
+    font-size: 20px;
+  }
+}
